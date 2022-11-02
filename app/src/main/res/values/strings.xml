@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MAKAUT SGPA YGPA Calculator</string>
+    <string name="instruction"><b>Instruction</b>\n<b>1.</b> Enter total subjects including lab.\n<b>2.</b>Enter SGPA if you want only semister\'s percentage and marks.\n<b>3.</b>Enter YGPA if you wnat only yearly percentage and marks.And also enter your 2 semister\'s total subjects.</string>
+</resources>
