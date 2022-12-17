@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1FFFFFF"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
+                android:text="Calculate persentage from YGPA"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbarlayout">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constrainLayout1"
             android:layout_width="match_parent"
@@ -52,9 +53,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@color/white"
-                app:cardElevation="10dp"
                 android:padding="10dp"
                 app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                android:outlineSpotShadowColor="#9D0FD9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -74,7 +76,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/edit_text_background"
-                        android:hint="Enter the number of subject"
+                        android:hint="Enter total number of subject"
                         android:inputType="number"
                         android:padding="10dp"
                         android:textColor="@color/black"
@@ -86,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edit_text_background"
-                        android:hint="YGPA or SGPA"
+                        android:hint="YGPA"
                         android:inputType="numberDecimal"
                         android:padding="10dp"
                         android:textColor="@color/black"
@@ -115,9 +117,10 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                app:cardElevation="10dp"
+                android:outlineSpotShadowColor="#9D0FD9"
                 android:padding="10dp"
                 app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView1">
@@ -127,11 +130,12 @@
                     android:layout_height="match_parent"
                     android:background="@color/white"
                     android:padding="5dp">
+
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yout percentage is :"
+                        android:text="Your percentage is :"
                         android:textColor="#303F9F"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -142,11 +146,11 @@
                         android:id="@+id/txtPercentage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0.00%"
                         android:padding="5dp"
+                        android:text="0.00%"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -156,8 +160,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="You Got"
-                        android:textSize="16sp"
                         android:textColor="#303F9F"
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtPercentage" />
@@ -166,11 +170,11 @@
                         android:id="@+id/txtGotNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="5dp"
                         android:text="0 out of 0"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:padding="5dp"
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -184,9 +188,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardElevation="5dp"
                 android:padding="5dp"
                 app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:outlineSpotShadowColor="#9D0FD9"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -201,12 +206,11 @@
                         android:id="@+id/txtInstruction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
                         android:padding="10dp"
                         android:text="@string/instruction"
+                        android:textAlignment="center"
                         android:textColor="#5E35B1"
-                        android:textSize="16sp"
-                         />
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
@@ -216,7 +220,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/constrainLayout1"
-        android:layout_marginTop="5dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -232,8 +236,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@color/white"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
 
@@ -264,8 +268,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@color/white"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
 
@@ -294,8 +298,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@color/white"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
 

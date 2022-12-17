@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 totalSub = numberOfSubject.getText().toString();
                 sgpa = sgpaOrYgpa.getText().toString();
-                if (totalSub.isEmpty() || sgpa.isEmpty()) {
+                if (totalSub.isEmpty() && sgpa.isEmpty()) {
                     // Toast.makeText(MainActivity.this, "Please Enter Proper Details", Toast.LENGTH_LONG).show();
                     Toasty.error(MainActivity.this, "Please Enter Proper Details", Toast.LENGTH_LONG).show();
                 } else {
@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Method to calculate percentage .
 
-    public String getSgpaToPercentage(Double SGPA) {
+    public String getSgpaToPercentage(Double GPA) {
         Double percentage;
-        percentage = (SGPA - 0.75) * 10;
+        percentage = (GPA - 0.75) * 10;
         String stringDecimal = String.format("%2f", percentage);
         return stringDecimal;
     }
